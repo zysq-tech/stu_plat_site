@@ -3,10 +3,10 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import SEO from "../components/seo"
 
-const TermsPage = () => {
+const PolicyPage = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			markdownRemark(frontmatter: { title: { eq: "Leagle Terms" } }) {
+			markdownRemark(frontmatter: { title: { eq: "Privacy Policy" } }) {
 				html
 				frontmatter {
 					title
@@ -19,10 +19,10 @@ const TermsPage = () => {
 	const { html } = markdownRemark
 	return (
 		<div>
-			<SEO title='Terms' />
+			<SEO title='Policy' />
 			<div dangerouslySetInnerHTML={{ __html: html }}></div>
 		</div>
 	)
 }
 
-export default TermsPage
+export default PolicyPage

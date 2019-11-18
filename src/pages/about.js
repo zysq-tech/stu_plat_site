@@ -9,7 +9,7 @@ import Card from "../components/card"
 const AboutPage = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			placeholderImage: file(relativePath: { eq: "icon.png" }) {
+			placeholderImage: file(relativePath: { eq: "images/icon.png" }) {
 				childImageSharp {
 					fluid {
 						...GatsbyImageSharpFluid
@@ -54,6 +54,10 @@ const AboutPage = () => {
 			<center>
 				<Link to='/terms' className='link'>
 					《注册协议》
+				</Link>
+				&
+				<Link to='/policy' className='link'>
+					《隐私协议》
 				</Link>
 			</center>
 		</div>
