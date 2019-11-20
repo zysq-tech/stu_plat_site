@@ -9,7 +9,7 @@ import Card from "../components/card"
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/icon.png" }) {
+      file(name: { eq: "icon" }, extension: { eq: "png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
