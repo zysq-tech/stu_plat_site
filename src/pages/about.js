@@ -9,7 +9,7 @@ import Card from "../components/card"
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "images/icon.png" }) {
+      file(relativePath: { eq: "images/icon.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -24,7 +24,7 @@ const AboutPage = () => {
       <SEO title="About" />
       <center>
         <div className="logo">
-          <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+          <Img fluid={data.file.childImageSharp.fluid} />
         </div>
       </center>
       <Card style={{ padding: 15 }}>
