@@ -12,6 +12,8 @@ const IndexPage = () => (
     <Link to="/policy/">Go to Policy Page</Link>
     <br></br>
     <Link to="/about/">Go to About Page</Link>
+    <br></br>
+    <Link to="/help/">Go to Help Page</Link>
   </Layout>
 )
 
